@@ -20,7 +20,8 @@ class Hangman:
         return input()
 
     def show_wrong_message(self) -> None:
-        print(f"Missed, mistake {self.number_attempt} out of {self.total_attempt}\n\n"
+        print(f"Missed, mistake {self.number_attempt} "
+              f"out of {self.total_attempt}\n\n"
               f"The word: {self.hidden_word}\n")
 
     def show_correct_message(self) -> None:
@@ -34,7 +35,11 @@ class Hangman:
             return False
 
         if answer in self.word:
-            self.hidden_word = "".join([answer if self.word[i] == answer else x for i, x in enumerate(self.hidden_word)])
+            self.hidden_word = "".join([
+                answer
+                if self.word[i] == answer
+                else x
+                for i, x in enumerate(self.hidden_word)])
             self.show_correct_message()
         else:
             self.number_attempt += 1
@@ -55,7 +60,8 @@ class Hangman:
 
 
 if __name__ == '__main__':
-    secret_word = ["root", "handsomely", "incandescent", "field", "prose", "hat", "teeny", "pets", "cry",
+    secret_word = ["root", "handsomely", "incandescent", "field",
+                   "prose", "hat", "teeny", "pets", "cry",
                    "wandering", "identify", "guitar"]
     game = Hangman(secret_word[random.randint(0, len(secret_word))])
     game.run()
