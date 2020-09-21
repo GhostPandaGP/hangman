@@ -4,7 +4,7 @@ python:
 install:
   - pip install codecov
 script:
-  - ./setup.py test
+  - pytest
 after_success:
   - codecov
   - bash <(curl -s https://codecov.io/bash)
