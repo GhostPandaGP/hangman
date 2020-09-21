@@ -3,8 +3,8 @@ python:
   - 3.8
 install:
   - pip install codecov
-script:
-  - ./setup.py test
+#script:
+#  - ./setup.py test
 after_success:
   - codecov
   - bash <(curl -s https://codecov.io/bash)
