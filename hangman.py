@@ -59,9 +59,13 @@ class Hangman:
             self.check_answer(answer)
 
 
-if __name__ == '__main__':
+def generate_random_word() -> str:
     secret_word = ["root", "handsomely", "incandescent", "field",
                    "prose", "hat", "teeny", "pets", "cry",
                    "wandering", "identify", "guitar"]
-    game = Hangman(secret_word[random.randint(0, len(secret_word))])
+    return secret_word[random.randint(0, len(secret_word))]
+
+
+if __name__ == '__main__':
+    game = Hangman(generate_random_word())
     game.run()

@@ -1,0 +1,18 @@
+language: python
+python:
+  - 3.8
+install:
+  - pip install codecov
+script:
+  - ./setup.py test
+after_success:
+  - codecov
+  - bash <(curl -s https://codecov.io/bash)
+
+# Отправлять уведомления на почту, если сборка упала
+notifications:
+  email:
+    recipients:
+      - whitestoic@gmail.com
+    on_success: never
+    on_failure: always
