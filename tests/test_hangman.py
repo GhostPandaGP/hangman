@@ -1,5 +1,5 @@
-from hangman import Hangman
-from hangman import generate_random_word
+from hangman.main import Hangman
+from hangman.main import generate_random_word
 
 
 def test_check_format_answer():
@@ -12,3 +12,13 @@ def test_check_format_answer():
 def test_generate_random_word() -> None:
     assert type(generate_random_word()) is str, "Generate word is not string"
     assert generate_random_word().isalpha(), "there are extraneous characters"
+
+
+def test_get_wrong_message() -> None:
+    hangman = Hangman
+    assert type(hangman.get_wrong_message()) is str, "Not correct format out"
+
+
+def test_get_correct_message() -> None:
+    hangman = Hangman
+    assert type(hangman.get_correct_message()) is str, "Not correct format out"

@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 """Setup script."""
@@ -6,14 +5,14 @@
 from setuptools import setup
 
 setup(
-    name="greetings",
+    name="hangman",
     version="0.0.0",
-    author="Arthur Khashaev",
-    author_email="arthur@khashaev.ru",
-    url="https://github.com/PPPoSD-2017/greetings",
+    author="Alexander Proskurin",
+    author_email="whitestoic@gmail.com",
+    url="https://github.com/GhostPandaGP/hangman",
     license="MIT",
     packages=[
-        "greetings",
+        "hangman",
     ],
     install_requires=[
     ],
