@@ -1,4 +1,7 @@
 # hangman
 [![Build Status][travis-badge]][travis-url]
 
-Hangman is a paper and pencil guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses. 
+## Game Hangman.
+
+Computer thinks of a random word and you tries to guess
+it by suggesting letters within a certain number of guesses. 

@@ -19,14 +19,14 @@ setup(
     setup_requires=[
         "pytest-runner",
         "pytest-pylint",
-        # "pytest-pycodestyle",
+        "pytest-pycodestyle",
         "pytest-pep257",
         "pytest-cov",
     ],
     tests_require=[
         "pytest",
         "pylint",
-        # "pycodestyle",
+        "pycodestyle",
         "pep257",
     ],
     classifiers=[
