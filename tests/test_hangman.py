@@ -1,5 +1,6 @@
 from hangman.main import Hangman
 from hangman.main import generate_random_word
+import pytest
 
 
 def test_check_format_answer():
