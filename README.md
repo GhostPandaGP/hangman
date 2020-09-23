@@ -1,5 +1,5 @@
 # hangman
-[![Build Status][travis-badge]][travis-url]
+[![Build Status](https://travis-ci.com/GhostPandaGP/hangman.svg?branch=master)](https://travis-ci.com/GhostPandaGP/hangman)
 
 ## Game Hangman.
 
