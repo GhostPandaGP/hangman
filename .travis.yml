@@ -3,6 +3,7 @@ python:
   - 3.8
 script:
   - pytest
+  - pylint hangman
 
 # Отправлять уведомления на почту, если сборка упала
 notifications:
