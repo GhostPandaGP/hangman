@@ -23,20 +23,14 @@ setup(
     setup_requires=[
         "pytest-runner",
         "pytest-cov",
-        "pycodestyle",
-        "pep257",
-        "pylint"
+        "pytest-pycodestyle",
+        "pytest-pep257",
+        "pytest-pylint"
     ],
     tests_require=[
         "pytest",
         "pylint",
         "pycodestyle",
         "pep257",
-    ],
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
     ]
 )

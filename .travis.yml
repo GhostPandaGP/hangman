@@ -1,16 +1,8 @@
 language: python
 python:
   - 3.8
-install:
-  - python setup.py -q install
-  - pip install codecov
 script:
-  - python setup.py test,
-  - pylint hangman,
-  - pep257
-  - pycodestyle
-#after_success:
-#  - codecov
+  - pytest
 
 # Отправлять уведомления на почту, если сборка упала
 notifications:
