@@ -3,6 +3,7 @@ python:
   - 3.8
 install:
   - pip install codecov
+  - pip install setuptools
 script:
   - ./setup.py install,
   - ./setup.py pytest,
