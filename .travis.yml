@@ -1,12 +1,8 @@
 language: python
 python:
   - 3.8
-before_install:
-  - pip install pylint
-  - pip install pytest
-  - pip install pep257
-  - pip install pycodestyle
 install:
+  - python setup.py -q install
   - pip install codecov
 script:
   - python setup.py test,
