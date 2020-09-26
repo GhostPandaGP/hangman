@@ -15,6 +15,10 @@ setup(
         "hangman",
     ],
     install_requires=[
+        "pylint",
+        "pytest",
+        "pep257",
+        "pycodestyle"
     ],
     setup_requires=[
         "pytest-runner",
