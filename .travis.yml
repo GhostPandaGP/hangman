@@ -2,9 +2,7 @@ language: python
 python:
   - 3.8
 install:
-#  - pip install codecov
-  - pip install distribute
-  - pip install pytest pylint pep257 pycodestyle
+  - pip install codecov
 script:
   - ./setup.py pytest,
   - pylint hangman,
