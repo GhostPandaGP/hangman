@@ -9,7 +9,7 @@ before_install:
 install:
   - pip install codecov
 script:
-  - ./setup.py pytest,
+  - python setup.py test,
   - pylint hangman,
   - pep257
   - pycodestyle
