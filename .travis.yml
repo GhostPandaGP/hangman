@@ -2,7 +2,7 @@ language: python
 python:
   - 3.8
 script:
-  - pytest --cov=hangman
+  - pytest
   - codecov
   - bash <(curl -s https://codecov.io/bash) -t 7409ec4d-3541-4c3b-a3f7-741482306829
 
