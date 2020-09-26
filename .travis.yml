@@ -4,6 +4,7 @@ python:
 install:
   - pip install codecov
 script:
+  - ./setup.py install,
   - ./setup.py pytest,
   - pylint hangman,
   - pep257
