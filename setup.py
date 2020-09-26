@@ -11,9 +11,9 @@ setup(
     author_email="whitestoic@gmail.com",
     url="https://github.com/GhostPandaGP/hangman",
     license="MIT",
-    # packages=[
-    #     # "hangman",
-    # ],
+    packages=[
+        "hangman",
+    ],
     install_requires=[
     ],
     setup_requires=[

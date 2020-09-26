@@ -1,4 +1,5 @@
 """Game Hangman.
+
 Computer thinks of a random word and you tries to guess
 it by suggesting letters within a certain number of guesses.
 """
@@ -7,6 +8,7 @@ from random import randint
 
 def check_format_answer(answer: str) -> bool:
     """Check format answer.
+
     Returns True if one characters are alphabet letters (a-z)
     :param answer: str
     :return: bool
@@ -16,6 +18,7 @@ def check_format_answer(answer: str) -> bool:
 
 def get_answer() -> str:
     """Welcome user.
+
      It make welcome and gets the value from the user.
     :return: str
     """
@@ -29,6 +32,7 @@ def get_wrong_message(
     hidden_word: str
 ) -> str:
     """Return a output line.
+
     Use this method when the user was wrong.
     :param current_attempt: int
     :param total_attempt: int
@@ -42,6 +46,7 @@ def get_wrong_message(
 
 def get_correct_message(hidden_word: str) -> str:
     """Return a output line.
+
     Use this method when the user was correct.
     :param hidden_word: str
     :return:
@@ -56,6 +61,7 @@ def check_answer(
     char: str
 ) -> str:
     """Validate answer user.
+
     Get the user's response and outputs the response as appropriate.
     if char in word than return hidden word.
     :param word: str
@@ -77,6 +83,7 @@ def check_answer(
 
 def play_hangman(word: str, total_attempt: int):
     """Start game.
+
     Use this function that start game.
     :param word:
     :param total_attempt:
@@ -89,7 +96,8 @@ def play_hangman(word: str, total_attempt: int):
         tmp_hidden_word = check_answer(word, hidden_word, char)
         if tmp_hidden_word == hidden_word:
             current_attempt += 1
-            print(get_wrong_message(current_attempt, total_attempt, hidden_word))
+            print(get_wrong_message(current_attempt,
+                                    total_attempt, hidden_word))
         else:
             hidden_word = tmp_hidden_word
             print(get_correct_message(hidden_word))
@@ -104,6 +112,7 @@ def play_hangman(word: str, total_attempt: int):
 
 def generate_random_word() -> str:
     """Generate word.
+
     This function generate random word from a given list.
     :return:
     """
