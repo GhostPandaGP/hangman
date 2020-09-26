@@ -18,10 +18,10 @@ setup(
     ],
     setup_requires=[
         "pytest-runner",
-        "pytest-pylint",
-        "pytest-pycodestyle",
-        "pytest-pep257",
         "pytest-cov",
+        "pycodestyle",
+        "pep257",
+        "pylint"
     ],
     tests_require=[
         "pytest",
