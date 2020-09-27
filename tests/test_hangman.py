@@ -1,8 +1,8 @@
 """Test module hangman."""
-from hangman import check_format_answer, generate_random_word, \
-    get_wrong_message, get_correct_message, check_answer
 import pytest
 from unittest import mock
+from hangman import check_format_answer, generate_random_word, \
+    get_wrong_message, get_correct_message, check_answer
 
 
 @pytest.fixture
