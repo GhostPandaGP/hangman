@@ -1,6 +1,6 @@
 """Test module hangman."""
 from hangman import check_format_answer, generate_random_word, \
-    get_wrong_message, get_correct_message, check_answer
+    get_wrong_message, get_correct_message, check_answer, play_hangman
 import pytest
 from unittest import mock
 
@@ -51,3 +51,14 @@ def test_check_answer(words):
         "Incorrect check answer for existed char"
     assert check_answer(words["full"], words["hidden"], "x") == "wo**", \
         "Incorrect check answer for not existed char"
+
+
+def test_play_hangman(capfd):
+    """Test play process."""
+    word = "word"
+    play_hangman(word, 5)
+    print(f"capfd: {capfd.readouterr().out}")
+
+
+if __name__ == '__main__':
+    test_play_hangman()

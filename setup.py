@@ -15,22 +15,24 @@ setup(
         "hangman",
     ],
     install_requires=[
-        "pylint",
-        "pytest",
-        "pep257",
-        "pycodestyle"
     ],
     setup_requires=[
         "pytest-runner",
-        "pytest-cov",
+        "pytest-pylint",
         "pytest-pycodestyle",
         "pytest-pep257",
-        "pytest-pylint"
+        "pytest-cov",
     ],
     tests_require=[
         "pytest",
         "pylint",
         "pycodestyle",
         "pep257",
+    ],
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
     ]
 )
