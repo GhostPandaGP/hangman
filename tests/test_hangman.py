@@ -1,14 +1,7 @@
 """Test module hangman."""
 import pytest
-from unittest import mock
 from hangman import check_format_answer, generate_random_word, \
     get_wrong_message, get_correct_message, check_answer
-
-
-@pytest.fixture
-def words():
-    """Fix value words."""
-    return {"full": "word", "hidden": "wo**"}
 
 
 def test_check_format_answer():
@@ -17,12 +10,6 @@ def test_check_format_answer():
         "Check format answer don't see one char like correct answer."
     assert not check_format_answer("5"), \
         "Check format answer don't check numbers."
-
-
-@mock.patch("hangman.randint", return_value=11, autospec=True)
-def test_generate_random_word_max(mock_randint) -> None:
-    """Test generate_random_word on last value."""
-    assert generate_random_word(), "Error in end value for generate"
 
 
 def test_generate_random_word() -> None:
