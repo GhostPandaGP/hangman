@@ -1,5 +1,4 @@
 """Test module hangman."""
-import pytest
 from hangman import check_format_answer, generate_random_word, \
     get_wrong_message, get_correct_message, check_answer
 
