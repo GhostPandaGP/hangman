@@ -32,7 +32,7 @@ def test_get_correct_message():
         "Correct message is not string."
 
 
-def test_check_answer(words):
+def test_check_answer():
     """Test check_answer."""
     assert check_answer("word", "wo**", "r") == "wor*", \
         "Incorrect check answer for existed char"
