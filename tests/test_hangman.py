@@ -20,21 +20,21 @@ def test_generate_random_word() -> None:
         "There are extraneous characters."
 
 
-def test_get_wrong_message(words):
+def test_get_wrong_message():
     """Test get_wrong_message."""
-    assert isinstance(get_wrong_message(0, 5, words["hidden"]), str), \
+    assert isinstance(get_wrong_message(0, 5, "wo**"), str), \
         "Wrong message is not string."
 
 
-def test_get_correct_message(words):
+def test_get_correct_message():
     """Test get_correct_message."""
-    assert isinstance(get_correct_message(words["hidden"]), str), \
+    assert isinstance(get_correct_message("wo**"), str), \
         "Correct message is not string."
 
 
 def test_check_answer(words):
     """Test check_answer."""
-    assert check_answer(words["full"], words["hidden"], "r") == "wor*", \
+    assert check_answer("word", "wo**", "r") == "wor*", \
         "Incorrect check answer for existed char"
-    assert check_answer(words["full"], words["hidden"], "x") == "wo**", \
+    assert check_answer("word", "wo**", "x") == "wo**", \
         "Incorrect check answer for not existed char"
